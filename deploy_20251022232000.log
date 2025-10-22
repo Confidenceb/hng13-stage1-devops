@@ -1,0 +1,60 @@
+Enter Git repository URL: Enter Personal Access Token (PAT): Enter branch name (default: main): Enter remote server username: Enter remote server IP: Enter SSH key path: Enter application internal port: Repository exists, pulling latest changes...
+From https://github.com/Confidenceb/hng13-stage1-app
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+Docker configuration found.
+Checking SSH connectivity...
+connected
+Updating packages...
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble InRelease
+Hit:2 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:3 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-backports InRelease
+Hit:4 http://security.ubuntu.com/ubuntu noble-security InRelease
+Reading package lists...
+Building dependency tree...
+Reading state information...
+55 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Installing Docker, Docker Compose, Nginx if missing...
+Reading package lists...
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Building dependency tree...
+Reading state information...
+docker.io is already the newest version (28.2.2-0ubuntu1~24.04.1).
+docker-compose is already the newest version (1.29.2-6ubuntu1).
+nginx is already the newest version (1.24.0-2ubuntu7.5).
+0 upgraded, 0 newly installed, 0 to remove and 55 not upgraded.
+Adding user to docker group...
+Enabling and starting services...
+Synchronizing state of nginx.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable nginx
+Installation versions:
+Docker version 28.2.2, build 28.2.2-0ubuntu1~24.04.1
+docker-compose version 1.29.2, build unknown
+Transferring project files...
+scp: dest open "/home/ubuntu/hng13-stage1-app/.git/objects/ee/5f88ee91b91618bf2392df1258ee9adcffbee7": Permission denied
+scp: upload "./.git/objects/ee/5f88ee91b91618bf2392df1258ee9adcffbee7" to "/home/ubuntu/hng13-stage1-app/.git/objects/ee/5f88ee91b91618bf2392df1258ee9adcffbee7" failed
+scp: dest open "/home/ubuntu/hng13-stage1-app/.git/objects/48/f80094390a006ce7acbb6921fa863dae93cf6b": Permission denied
+scp: upload "./.git/objects/48/f80094390a006ce7acbb6921fa863dae93cf6b" to "/home/ubuntu/hng13-stage1-app/.git/objects/48/f80094390a006ce7acbb6921fa863dae93cf6b" failed
+scp: dest open "/home/ubuntu/hng13-stage1-app/.git/objects/31/250ecf2bdd6efdd868dd2f3dcabbf59873cbb3": Permission denied
+scp: upload "./.git/objects/31/250ecf2bdd6efdd868dd2f3dcabbf59873cbb3" to "/home/ubuntu/hng13-stage1-app/.git/objects/31/250ecf2bdd6efdd868dd2f3dcabbf59873cbb3" failed
+scp: dest open "/home/ubuntu/hng13-stage1-app/.git/objects/9d/afd507572579bc7e776468b6743a551b142eef": Permission denied
+scp: upload "./.git/objects/9d/afd507572579bc7e776468b6743a551b142eef" to "/home/ubuntu/hng13-stage1-app/.git/objects/9d/afd507572579bc7e776468b6743a551b142eef" failed
+scp: dest open "/home/ubuntu/hng13-stage1-app/.git/objects/5a/afbe2a7fda2a923d7d1b7281cc7a2287ddf6c0": Permission denied
+scp: upload "./.git/objects/5a/afbe2a7fda2a923d7d1b7281cc7a2287ddf6c0" to "/home/ubuntu/hng13-stage1-app/.git/objects/5a/afbe2a7fda2a923d7d1b7281cc7a2287ddf6c0" failed
+scp: dest open "/home/ubuntu/hng13-stage1-app/.git/objects/pack/pack-c7a63d7091a52058ab8af0cca98483d7034d5997.rev": Permission denied
+scp: upload "./.git/objects/pack/pack-c7a63d7091a52058ab8af0cca98483d7034d5997.rev" to "/home/ubuntu/hng13-stage1-app/.git/objects/pack/pack-c7a63d7091a52058ab8af0cca98483d7034d5997.rev" failed
+scp: dest open "/home/ubuntu/hng13-stage1-app/.git/objects/pack/pack-c7a63d7091a52058ab8af0cca98483d7034d5997.idx": Permission denied
+scp: upload "./.git/objects/pack/pack-c7a63d7091a52058ab8af0cca98483d7034d5997.idx" to "/home/ubuntu/hng13-stage1-app/.git/objects/pack/pack-c7a63d7091a52058ab8af0cca98483d7034d5997.idx" failed
+scp: dest open "/home/ubuntu/hng13-stage1-app/.git/objects/pack/pack-c7a63d7091a52058ab8af0cca98483d7034d5997.pack": Permission denied
+scp: upload "./.git/objects/pack/pack-c7a63d7091a52058ab8af0cca98483d7034d5997.pack" to "/home/ubuntu/hng13-stage1-app/.git/objects/pack/pack-c7a63d7091a52058ab8af0cca98483d7034d5997.pack" failed
+scp: dest open "/home/ubuntu/hng13-stage1-app/.git/objects/e2/3b9b4c74fbe497aa7d1747b1ee627f4591c3d4": Permission denied
+scp: upload "./.git/objects/e2/3b9b4c74fbe497aa7d1747b1ee627f4591c3d4" to "/home/ubuntu/hng13-stage1-app/.git/objects/e2/3b9b4c74fbe497aa7d1747b1ee627f4591c3d4" failed
+scp: dest open "/home/ubuntu/hng13-stage1-app/.git/objects/ac/52609dffd60a8cf1f8f5089010e8ae0f4ad2be": Permission denied
+scp: upload "./.git/objects/ac/52609dffd60a8cf1f8f5089010e8ae0f4ad2be" to "/home/ubuntu/hng13-stage1-app/.git/objects/ac/52609dffd60a8cf1f8f5089010e8ae0f4ad2be" failed
+scp: failed to upload directory . to /home/ubuntu/hng13-stage1-app
+Error occurred. Check the log deploy_20251022232000.log

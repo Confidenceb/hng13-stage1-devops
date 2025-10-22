@@ -1,0 +1,12 @@
+Enter Git repository URL: Enter Personal Access Token (PAT): Enter branch name (default: main): Enter remote server username: Enter remote server IP: Enter SSH key path: Enter application internal port: Repository exists, pulling latest changes...
+From https://github.com/Confidenceb/hng13-stage1-app
+ * branch            main       -> FETCH_HEAD
+   5f68841..48f8009  main       -> origin/main
+Updating 5f68841..48f8009
+Fast-forward
+ Dockerfile | 1 -
+ 1 file changed, 1 deletion(-)
+Docker configuration found.
+Checking SSH connectivity...
+ssh: connect to host 34.217.97.180 port 22: Connection timed out
+Error occurred. Check the log deploy_20251022225644.log

@@ -1,0 +1,65 @@
+Enter Git repository URL: Enter Personal Access Token (PAT): Enter branch name (default: main): Enter remote server username: Enter remote server IP: Enter SSH key path: Enter application internal port: Repository exists, pulling latest changes...
+From https://github.com/Confidenceb/hng13-stage1-app
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+Docker configuration found.
+Checking SSH connectivity...
+connected
+Updating packages...
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble InRelease
+Hit:2 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:3 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-backports InRelease
+Hit:4 http://security.ubuntu.com/ubuntu noble-security InRelease
+Reading package lists...
+Building dependency tree...
+Reading state information...
+55 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Installing Docker, Docker Compose, Nginx if missing...
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+docker.io is already the newest version (28.2.2-0ubuntu1~24.04.1).
+docker-compose is already the newest version (1.29.2-6ubuntu1).
+nginx is already the newest version (1.24.0-2ubuntu7.5).
+0 upgraded, 0 newly installed, 0 to remove and 55 not upgraded.
+Adding user to docker group...
+Enabling and starting services...
+Synchronizing state of nginx.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable nginx
+Installation versions:
+Docker version 28.2.2, build 28.2.2-0ubuntu1~24.04.1
+docker-compose version 1.29.2, build unknown
+Transferring project files...
+Building and running Docker containers...
+Removing network hng13-stage1-app_default
+Creating network "hng13-stage1-app_default" with the default driver
+Building app
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon   76.8kB
+Step 1/6 : FROM node:18-alpine
+ ---> ee77c6cd7c18
+Step 2/6 : WORKDIR /app
+ ---> Using cache
+ ---> f954cf942566
+Step 3/6 : RUN npm install
+ ---> Running in 9a0435ca7786
+[91mnpm error code ENOENT
+[0m[91mnpm error syscall open
+[0m[91mnpm error path /app/package.json
+[0m[91mnpm error errno -2
+[0m[91mnpm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/app/package.json'
+[0m[91mnpm error enoent This is related to npm not being able to find a file.
+npm error enoent
+[0m[91mnpm error A complete log of this run can be found in: /root/.npm/_logs/2025-10-22T22_08_13_311Z-debug-0.log
+[0mThe command '/bin/sh -c npm install' returned a non-zero code: 254
+Service 'app' failed to build : Build failed
+Error occurred. Check the log deploy_20251022230601.log

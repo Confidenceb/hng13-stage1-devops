@@ -1,0 +1,8 @@
+Enter Git repository URL: Enter Personal Access Token (PAT): Enter branch name (default: main): Enter remote server username: Enter remote server IP: Enter SSH key path: Enter application internal port: Repository exists, pulling latest changes...
+From https://github.com/Confidenceb/hng13-stage1-app
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+Docker configuration found.
+Checking SSH connectivity...
+adminolix@34.211.216.173: Permission denied (publickey).
+Error occurred. Check the log deploy_20251022201601.log

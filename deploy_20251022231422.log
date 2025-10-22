@@ -1,0 +1,112 @@
+Enter Git repository URL: Enter Personal Access Token (PAT): Enter branch name (default: main): Enter remote server username: Enter remote server IP: Enter SSH key path: Enter application internal port: Repository exists, pulling latest changes...
+From https://github.com/Confidenceb/hng13-stage1-app
+ * branch            main       -> FETCH_HEAD
+   48f8009..e23b9b4  main       -> origin/main
+Updating 48f8009..e23b9b4
+Fast-forward
+ Dockerfile         | 9 +++------
+ docker-compose.yml | 8 ++------
+ 2 files changed, 5 insertions(+), 12 deletions(-)
+Docker configuration found.
+Checking SSH connectivity...
+connected
+Updating packages...
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble InRelease
+Hit:2 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:3 http://us-west-2.ec2.archive.ubuntu.com/ubuntu noble-backports InRelease
+Hit:4 http://security.ubuntu.com/ubuntu noble-security InRelease
+Reading package lists...
+Building dependency tree...
+Reading state information...
+55 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Installing Docker, Docker Compose, Nginx if missing...
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+docker.io is already the newest version (28.2.2-0ubuntu1~24.04.1).
+docker-compose is already the newest version (1.29.2-6ubuntu1).
+nginx is already the newest version (1.24.0-2ubuntu7.5).
+0 upgraded, 0 newly installed, 0 to remove and 55 not upgraded.
+Adding user to docker group...
+Enabling and starting services...
+Synchronizing state of nginx.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable nginx
+Installation versions:
+Docker version 28.2.2, build 28.2.2-0ubuntu1~24.04.1
+docker-compose version 1.29.2, build unknown
+Transferring project files...
+Building and running Docker containers...
+Removing network hng13-stage1-app_default
+Creating network "hng13-stage1-app_default" with the default driver
+Building web
+Sending build context to Docker daemon  83.97kB
+Step 1/3 : FROM nginx:alpine
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+alpine: Pulling from library/nginx
+2d35ebdb57d9: Pulling fs layer
+f80aba050ead: Pulling fs layer
+621a51978ed7: Pulling fs layer
+03e63548f209: Pulling fs layer
+83ce83cd9960: Pulling fs layer
+e2d0ea5d3690: Pulling fs layer
+7fb80c2f28bc: Pulling fs layer
+76c9bcaa4163: Pulling fs layer
+03e63548f209: Waiting
+83ce83cd9960: Waiting
+e2d0ea5d3690: Waiting
+7fb80c2f28bc: Waiting
+76c9bcaa4163: Waiting
+621a51978ed7: Verifying Checksum
+621a51978ed7: Download complete
+f80aba050ead: Verifying Checksum
+f80aba050ead: Download complete
+2d35ebdb57d9: Verifying Checksum
+2d35ebdb57d9: Download complete
+2d35ebdb57d9: Pull complete
+03e63548f209: Verifying Checksum
+03e63548f209: Download complete
+83ce83cd9960: Verifying Checksum
+83ce83cd9960: Download complete
+e2d0ea5d3690: Verifying Checksum
+e2d0ea5d3690: Download complete
+f80aba050ead: Pull complete
+621a51978ed7: Pull complete
+03e63548f209: Pull complete
+83ce83cd9960: Pull complete
+e2d0ea5d3690: Pull complete
+7fb80c2f28bc: Verifying Checksum
+7fb80c2f28bc: Download complete
+7fb80c2f28bc: Pull complete
+76c9bcaa4163: Verifying Checksum
+76c9bcaa4163: Download complete
+76c9bcaa4163: Pull complete
+Digest: sha256:61e01287e546aac28a3f56839c136b31f590273f3b41187a36f46f6a03bbfe22
+Status: Downloaded newer image for nginx:alpine
+ ---> 5e7abcdd2021
+Step 2/3 : COPY index.html /usr/share/nginx/html/index.html
+ ---> af9caab673a8
+Step 3/3 : EXPOSE 80
+ ---> Running in 2b5d3a46ab15
+ ---> Removed intermediate container 2b5d3a46ab15
+ ---> 44655efb0126
+Successfully built 44655efb0126
+Successfully tagged hng13-stage1-app_web:latest
+Image for service web was built because it did not already exist. To rebuild this image you must use `docker-compose build` or `docker-compose up --build`.
+Creating hng13-stage1-app_web_1 ... 
+Host is already in use by another container
+Creating hng13-stage1-app_web_1 ... error
+
+ERROR: for hng13-stage1-app_web_1  Cannot start service web: failed to set up container networking: driver failed programming external connectivity on endpoint hng13-stage1-app_web_1 (9ae47e014038782e8481224e580be67e2c88e92d49729acebf7f3c847d4cc7f8): failed to bind host port for 0.0.0.0:80:172.18.0.2:80/tcp: address already in use
+
+ERROR: for web  Cannot start service web: failed to set up container networking: driver failed programming external connectivity on endpoint hng13-stage1-app_web_1 (9ae47e014038782e8481224e580be67e2c88e92d49729acebf7f3c847d4cc7f8): failed to bind host port for 0.0.0.0:80:172.18.0.2:80/tcp: address already in use
+Encountered errors while bringing up the project.
+Error occurred. Check the log deploy_20251022231422.log
